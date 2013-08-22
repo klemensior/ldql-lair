@@ -1,0 +1,38 @@
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+blue {
+	color: #2ba6cb;
+}
+
+.text-small {
+	font-size: 14px;
+}
+
+hr {
+	margin: 0px, 0px, 0px, 0px !important;
+}
+
+textarea {
+ 	height: 150px;
+ }
+
+ #rules {
+ 	height: 250px;
+ }
+
+.section-name {
+	background-color: #2ba6cb;
+}
+
+.section-name h1 {
+	color: white;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+.nav {
+	margin-top: 10px;
+}

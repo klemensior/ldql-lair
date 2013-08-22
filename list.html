@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>LDQL</title>
+
+  
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+
+	<div class="nav">
+		<div class="row">
+			<div class="large-12 columns">
+				<h5>LDQL LAIR</h5>
+			</div>
+		</div>	
+	</div>
+
+	<div class="section-name">
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Rules list</h1>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="row">
+		<div class="content">
+			<div class="large-9 columns">
+				<form>
+					<h4><blue>146. </blue> Afraid of</h4>
+					<blockquote>Tutaj opis <strong>zasady</strong>! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum, felis a ullamcorper hendrerit, justo dui convallis orci, sed hendrerit justo urna in nunc.<cite>Agnieszka Frankowska</cite></blockquote>
+					<a href="#" data-reveal-id="146" class="small button">Show rule</a>
+					<a href="#" class="small button">Edit rule</a>
+					<hr>
+					<h4><blue>146. </blue> Afraid of</h4>
+					<blockquote>Tutaj opis <strong>zasady</strong>! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum, felis a ullamcorper hendrerit, justo dui convallis orci, sed hendrerit justo urna in nunc.<cite>Agnieszka Frankowska</cite></blockquote>
+					<a href="#" data-reveal-id="147" class="small button">Show rule</a>
+					<a href="#" class="small button">Edit rule</a>
+					<hr>
+					<h4><blue>146. </blue> Afraid of</h4>
+					<blockquote>Tutaj opis <strong>zasady</strong>! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum, felis a ullamcorper hendrerit, justo dui convallis orci, sed hendrerit justo urna in nunc.<cite>Agnieszka Frankowska</cite></blockquote>
+					<a href="#" data-reveal-id="148" class="small button">Show rule</a>
+					<a href="#" class="small button">Edit rule</a>
+					<hr>
+					<h4><blue>146. </blue> Afraid of</h4>
+					<blockquote>Tutaj opis <strong>zasady</strong>! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum, felis a ullamcorper hendrerit, justo dui convallis orci, sed hendrerit justo urna in nunc.<cite>Agnieszka Frankowska</cite></blockquote>
+					<a href="#" data-reveal-id="149" class="small button">Show rule</a>
+					<a href="#" class="small button">Edit rule</a>
+					<hr>
+				</form>
+			</div>
+		</div>
+
+
+		<!-- Menu -->
+		<div class="large-3 columns">
+			<div class="section-container accordion" data-section="accordion">
+			  <section> <!-- class="active" - gdy aktywny -->
+			    <p class="title" data-section-title><a href="test.html">Test rules</a></p>
+			  </section>
+			  <section>
+			    <p class="title" data-section-title><a href="create.html">Create rules</a></p>
+			  </section>
+			  <section>
+			    <p class="title" data-section-title><a href="list.html">Rules list</a></p>
+			  </section>
+			  <section>
+			    <p class="title" data-section-title><a href="#">Definitions</a></p>
+			    <div class="content" data-section-content>
+			      <ul class="side-nav">
+	                  <li><a href="word-list.html">Word lists</a></li>
+	                  <li><a href="function-list.html">Functions</a></li>
+	                </ul>
+			    </div>
+			  </section>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="146" class="reveal-modal small">
+        <div class="row collapse">
+          <div class="large-12 columns">
+          	<h3><blue>146</blue></h3>
+          	<h3>Afraid of (#2)</h3>          	
+          	<pre>
+SELECT P:s as Kto,
+       P:p+P:o.filter(core) AS Co
+WHERE subject(s)
+      AND predicate(p)
+      AND (null(o)
+           OR (object(o) AND o->p))            
+      AND s->p
+          	</pre>
+          	<blockquote>Tutaj opis <strong>zasady</strong>! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum, felis a ullamcorper hendrerit, justo dui convallis orci, sed hendrerit justo urna in nunc.<cite>Agnieszka Frankowska</cite></blockquote>
+          </div>
+        </div>
+    </div>
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
