@@ -38,37 +38,100 @@
 	<div class="row">
 		<div class="content">
 			<div class="large-9 columns">
-				<form data-abide>
-					<h3>Text Input <i class="icon-cogs"></i></h3>
-					<textarea placeholder="Input text here"></textarea>
-					<a href="#" class="small button">Parse text</a>
-					<a href="#" data-reveal-id="ld-output" class="small button">LD Output</a>
-					<h3>LDQL</h3>
-					<textarea id="rules" placeholder="Input rules here"></textarea>
-					<i class="icon-cogs"></i>
-					<a href="#" class="small button">Test Rule</a>
-					<a href="#" class="small button pull right">a</a>
-					<a href="#" class="small button pull right">b</i></a>
+				<!-- <blockquote>Porzućcie wszelką nadzieję, wy, którzy wchodzicie.<cite>Dante, Boska Komedia I 3, 9</cite></blockquote> -->
+				<h2>Add new list</h2>
+				<form >
+					<label>List name</label>
+					<input type="text" placeholder="Name">
+					<label>List description</label>
+					<textarea placeholder="List description"></textarea>
+					<label>List input</label>
+					<textarea id="rules" placeholder="Input"></textarea>
+					<div class="switch">
+					  <input id="x" name="switch-x" type="radio" checked>
+					  <label for="x" onclick="">Local</label>
+
+					  <input id="x1" name="switch-x" type="radio">
+					  <label for="x1" onclick="">Global</label>
+
+					  <span></span>
+					</div>
+					<a href="#" class="small button">Save</a>
 				</form>
-				<hr>
+			    <hr>
+			    <h2>Hitherto list</h2>
 				<table>
-				  <thead>
-				    <tr>
-				      <th>kto</th>
-				      <th>co</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				    <tr>
-				      <td>costam</td>
-				      <td>jakies<td>
-				    </tr>
-				    <tr>
-				      <td>fewewfew</td>
-				      <td>syfiaste</td>
-				    </tr>
-				  </tbody>
-				</table>
+	              <thead>
+	                <tr>
+	                  <th width="150">Name</th>
+	                  <th>Description</th>
+	                  <th width="250">Options</th>
+	                </tr>
+	              </thead>
+	              <tbody>
+	                <tr>
+	                  <td><h4><blue>emo_verbs</blue></h4></td>
+	                  <td><blockquote>Tutaj opis <strong>listy</strong>! Lorem ipsum dolor sit amet.<cite>Agnieszka Frankowska</cite></blockquote></td>
+	                  <td>
+	                  	
+	                  	<a href="#" data-reveal-id="emo_verbs" class="small button">Show</a>
+						<a href="#" class="small button" data-dropdown="edit-list">Edit</a>
+						<div id="edit-list" class="f-dropdown content medium" data-dropdown-content>
+						  <form >
+							<label>List name</label>
+		    				<input type="text" placeholder="Name">
+		    				<label>List description</label>
+		    				<textarea placeholder="List description"></textarea>
+		    				<label>List input</label>
+		    				<textarea id="rules" placeholder="Input"></textarea>
+		    				<div class="switch">
+							  <input id="x" name="switch-x" type="radio" checked>
+							  <label for="x" onclick="">Local</label>
+
+							  <input id="x1" name="switch-x" type="radio">
+							  <label for="x1" onclick="">Global</label>
+
+							  <span></span>
+							</div>
+		    				<a href="#" class="small button">Save</a>
+						  </form>	
+						</div>
+					  </td>
+	                </tr>
+	                <tr>
+	                  <td><h4><blue>emo_verbs</blue></h4></td>
+	                  <td><blockquote>Tutaj opis <strong>listy</strong>! Lorem ipsum dolor sit amet.<cite>Agnieszka Frankowska</cite></blockquote></td>
+	                  <td>
+	                  	<a href="#" data-reveal-id="emo_verbs" class="small button">Show</a>
+						<a href="#" class="small button" data-dropdown="save-rule">Edit</a>
+						<div id="save-rule" class="f-dropdown content medium" data-dropdown-content>
+						  <form >
+							<label>List name</label>
+		    				<input type="text" placeholder="Name">
+		    				<label>List description</label>
+		    				<textarea placeholder="List description"></textarea>
+		    				<label>List input</label>
+		    				<textarea id="rules" placeholder="Input"></textarea>
+		    				<div class="switch">
+							  <input id="x" name="switch-x" type="radio" checked>
+							  <label for="x" onclick="">Local</label>
+
+							  <input id="x1" name="switch-x" type="radio">
+							  <label for="x1" onclick="">Global</label>
+
+							  <span></span>
+							</div>
+		    				<a href="#" class="small button">Save</a>
+						  </form>	
+							</div>
+						</td>
+	                </tr>
+	              </tbody>
+	            </table>
+	            
+				
+				
+				
 			</div>
 		</div>
 
@@ -76,7 +139,7 @@
 		<!-- Menu -->
 		<div class="large-3 columns">
 			<div class="section-container accordion" data-section="accordion">
-			  <section>
+			  <section> <!-- class="active" - gdy aktywny -->
 			    <p class="title" data-section-title><a href="test.html">Test rules</a></p>
 			  </section>
 			  <section>
@@ -99,43 +162,27 @@
 	</div>
 
 
-	<div id="ld-output" class="reveal-modal small">
+	<div id="emo_verbs" class="reveal-modal small">
         <div class="row collapse">
           <div class="large-12 columns">
-          	<h3>LD Output</h3>
-          	<p>Jakieś wesołe przeparsowane zdanko</p>
+          	<h3>emo_verbs</h3>
+          	<p>Opis listy</p>
           	<table>
-			  <thead>
-			    <tr>
-			      <th>Table Header</th>
-			      <th>Table Header</th>
-			      <th>Table Header</th>
-			      <th>Table Header</th>
-			    </tr>
-			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>Content Goes Here</td>
-			      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-			      <td>Content Goes Here</td>
-			      <td>Content Goes Here</td>
+			      <td>love</td>
 			    </tr>
 			    <tr>
-			      <td>Content Goes Here</td>
-			      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-			      <td>Content Goes Here</td>
-			      <td>Content Goes Here</td>
+			      <td>like</td>
 			    </tr>
 			    <tr>
-			      <td>Content Goes Here</td>
-			      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-			      <td>Content Goes Here</td>
-			      <td>Content Goes Here</td>
+			      <td>hate</td>
 			    </tr>
 			  </tbody>
 			</table>
           </div>
         </div>
+        <a class="close-reveal-modal">&#215;</a>
     </div>
 
   <script>
